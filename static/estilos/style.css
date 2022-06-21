@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+}
+
+body{
+    font-size: 100%;
+}
+
+.cabecalho{
+    background:#808080;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    
+}
+
+.cabecalho-img{
+    height: 50px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+    font-size: 20px;
+    color: #bcbcbc;
+}
+
+.conteudo{
+    background: #C4C4C4;
+    border-top: 2px solid black;
+    margin-bottom: 32px;
+}
+
+.conteudo-vestibular1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.conteudo-vestibular1-escrito{
+    display: flex;
+    flex-direction: column;
+    color: #7f8081;
+}
+
+.conteudo-vestibular1-escrito1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.conteudo-vestibular1-escrito-titulo{
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.conteudo-vestibular1-escrito-subtitulo{
+    font-size: 20px;
+}
+
+.bold-content{
+    color: #2d2e2d;
+    font-weight: 700;
+}
+
+.conteudo-vestibular1-formulario{
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-vestibular1-email{
+    font-size: 20px;
+    width: 83%;
+}
+
+.conteudo-vestibular1-email-botao{
+    font-size: 20px;
+    font-weight: 600;
+    color: #7f8081;
+    border-radius: 12%;
+}
+
+.conteudo-vestibular2{
+    padding: 12px;
+}
+
+.conteudo2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+     
+}
+
+.conteudo2-cursos{
+    width:auto;
+
+    
+}
+.conteudo2-cursos-titulo{
+    
+}
+
+.conteudo2-cursos-escrito{
+
+}
+
+.conteudo2-institucional{
+    width: auto;
+
+}
