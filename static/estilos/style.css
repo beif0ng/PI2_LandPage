@@ -8,6 +8,8 @@
 
 body{
     font-size: 100%;
+    max-width: 1316px;
+    min-width: 700px;
 }
 
 .cabecalho{
@@ -37,13 +39,15 @@ body{
 .conteudo{
     background: #C4C4C4;
     border-top: 2px solid black;
-    margin-bottom: 32px;
+    
+    
 }
 
 .conteudo-vestibular1{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 
 }
 
@@ -51,6 +55,7 @@ body{
     display: flex;
     flex-direction: column;
     color: #7f8081;
+    min-width: 450px;
 }
 
 .conteudo-vestibular1-escrito1{
@@ -97,24 +102,31 @@ body{
 .conteudo2{
     display: flex;
     flex-direction: row;
-    justify-content: space-around; 
-     
 }
 
-.conteudo2-cursos{
-    width:auto;
+@media screen and (max-width: 500px) {
+    .conteudo2-box{
 
-    
+    }
 }
-.conteudo2-cursos-titulo{
-    
-}
-
-.conteudo2-cursos-escrito{
+.conteudo2-img{
+    max-width:100%;
+    min-width: 350px;
+    height:auto;
 
 }
 
-.conteudo2-institucional{
-    width: auto;
+.rodape{
+    border-top: 2px solid black;
+    background: #303030;
+    height: 120px;
+}
+
+.rodape-titulo{
 
 }
+
+.rodape-polo{
+
+}
+
