@@ -8,7 +8,6 @@
 
 body{
     font-size: 100%;
-    max-width: 1316px;
     min-width: 700px;
 }
 
@@ -17,7 +16,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 12px;
     
 }
@@ -39,8 +38,8 @@ body{
 .conteudo{
     background: #C4C4C4;
     border-top: 2px solid black;
-    
-    
+    border-bottom: 2px solid black;
+    justify-content: center;
 }
 
 .conteudo-vestibular1{
@@ -96,37 +95,29 @@ body{
 }
 
 .conteudo-vestibular2{
-    padding: 12px;
+    padding-bottom: 12px;
 }
 
 .conteudo2{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
-
-@media screen and (max-width: 500px) {
-    .conteudo2-box{
-
-    }
 }
 .conteudo2-img{
-    max-width:100%;
     min-width: 350px;
     height:auto;
 
 }
 
 .rodape{
-    border-top: 2px solid black;
     background: #303030;
     height: 120px;
-}
-
-.rodape-titulo{
-
-}
-
-.rodape-polo{
-
+    color: #808080;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;;
 }
 
