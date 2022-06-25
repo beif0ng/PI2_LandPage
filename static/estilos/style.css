@@ -80,18 +80,12 @@ body{
 .conteudo-vestibular1-formulario{
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
 }
 
-.conteudo-vestibular1-email{
+.conteudo-vestibular1-form{
+    width: 400px;
     font-size: 20px;
-    width: 83%;
-}
-
-.conteudo-vestibular1-email-botao{
-    font-size: 20px;
-    font-weight: 600;
-    color: #7f8081;
-    border-radius: 12%;
 }
 
 .conteudo-vestibular2{

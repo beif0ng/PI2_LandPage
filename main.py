@@ -1,21 +1,42 @@
+from tokenize import String
 from flask import Flask, render_template
-#from datetime import datetime
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
 #criar a instancia do flask
 app = Flask(__name__)
 #Add banco de dados
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-# Scret key
-#app.config['SECRET_KEY'] = "pi univesp"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///emails.db'
+# Secret key
+app.config['SECRET_KEY'] = "pi univesp"
 #iniciar o bd
-#db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 #Create model
-#class Emails(db.model):
- #   email = db.Column(db.String(200), primary_key=True, unique=True)
-#    date_added = db.Column(db.DateTime, default=datetime.utcnow)
-#
-    #Create A String How to Use Databases With SQLAlchemy - Flask Fridays #8 00:09:00
+class Emails(db.Model):
+    email = db.Column(db.String(200), primary_key=True, unique=True)
+    date_added = db.Column(db.DateTime, default=datetime.utcnow)
+
+# Criar uma Classe de formulario
+class Emailform(FlaskForm):
+    email = StringField('Deixe Seu Melhor e-mail', validators=[DataRequired()])
+    submit = SubmitField('Enviar')
+
 #criar a rota
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    email = None
+    form = Emailform()
+    # Valitions
+    if form.validate_on_submit():
+        email = Emails.query.filter_by(email=form.email.data).first()
+        if email is None:
+            email = Emails(email=form.email.data)
+            db.session.add(email)
+            db.session.commit()
+        form.email.data = ''
+    
+    return render_template("index.html", email = email, form = form)

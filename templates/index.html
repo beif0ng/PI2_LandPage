@@ -21,14 +21,20 @@
         <section class="conteudo-vestibular1">
             <div class="conteudo-vestibular1-escrito">
                 <div class="conteudo-vestibular1-escrito1">
-                    <h1 class="conteudo-vestibular1-escrito-titulo">Deixe seu email</h1>
+                    <h1 class="conteudo-vestibular1-escrito-titulo">Deixe Seu Melhor e-mail</h1>
                     <p class="conteudo-vestibular1-escrito-subtitulo">Para receber informações do nosso <strong class="bold-content">Vestibular!</strong></p>
                 </div> 
                 <div class="conteudo-vestibular1-formulario">
-                    <input class="conteudo-vestibular1-email" type="email" placeholder="Deixe Seu Melhor e-mail"/>
-                
-                    <button class="conteudo-vestibular1-email-botao">Enviar</button>
                     
+                    {% block content %}
+                        <form method="POST" >
+                            {{form.hidden_tag() }}
+                            {{ form.email(class = "conteudo-vestibular1-form")}}
+                            {{ form.submit() }}
+                        </form>
+
+                    {% endblock %}
+                
                 </div>
             </div>
             <div class="conteudo-vestibular2">
