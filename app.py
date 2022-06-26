@@ -1,4 +1,3 @@
-from tokenize import String
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -6,10 +5,11 @@ from wtforms.validators import DataRequired
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 
+
 #criar a instancia do flask
 app = Flask(__name__)
 #Add banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///emails.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@localhost/emails'
 # Secret key
 app.config['SECRET_KEY'] = "pi univesp"
 #iniciar o bd

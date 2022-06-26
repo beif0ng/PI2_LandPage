@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pagina dos Polos UNIVESP Pradópolis e Sorocaba">
-    <link rel="stylesheet" type="text/css" href="../static/estilos/style.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilos/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Polos UNIVESP</title>
 </head>
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-img" src="..\static\img\logo-univesp.png" alt="Logo da UNIVESP">
+        <img class="cabecalho-img" src="{{url_for('static', filename='img/logo-univesp.png')}}" alt="Logo da UNIVESP">
         <nav class="cabecalho-menu">
-            <a class="cabecalho-menu-item">Vestibular</a>
-            <a class="cabecalho-menu-item">Cursos</a>
-            <a class="cabecalho-menu-item">Institucional</a>
+            <a class="cabecalho-menu-item" onclick="window.scrollBy(0,74)">Vestibular</a>
+            <a class="cabecalho-menu-item" onclick="window.scrollBy(0,512)">Cursos</a>
+            <a class="cabecalho-menu-item" onclick="window.scrollBy(0,512)">Institucional</a>
         </nav>
     </header>
 
@@ -29,17 +30,16 @@
                     {% block content %}
                         <form method="POST" >
                             {{form.hidden_tag() }}
-                            {{ form.email(class = "conteudo-vestibular1-form")}}
-                            {{ form.submit() }}
+                            {{ form.email(class="form-label")}}
+                            {{ form.submit(class="btn btn-outline-dark") }}
                         </form>
-
                     {% endblock %}
                 
                 </div>
             </div>
             <div class="conteudo-vestibular2">
                 <a href="https://univesp.br/vestibular">
-                    <img  class="conteudo-img" src="../static/img/Vestibular_2022.png" alt="Último Vestibular">
+                    <img  class="conteudo-img" src="{{url_for('static', filename='img/Vestibular_2022.png')}}" alt="Último Vestibular">
                 </a>
             </div>
         </section>
@@ -47,24 +47,26 @@
         <section class="conteudo2">
             <div class="conteudo2-box">
                 <a href="https://univesp.br/cursos">
-                    <img class="conteudo2-img" src="../static/img/cursos.png" alt="Cursos UNIVESP">
+                    <img class="conteudo2-img" src="{{url_for('static', filename='img/cursos.png')}}" alt="Nossos Cursos">
                 </a>
             </div>
             
 
             <div class="conteudo2-box">
                 <a href="https://univesp.br/institucional">
-                    <img class="conteudo2-img" src="../static/img/intitucional.png" alt="Institucional">
+                    <img class="conteudo2-img" src="{{url_for('static', filename='img/intitucional.png')}}" alt="Sobre a Instituição">
                 </a>
             </div>
         </section>
+        
     </main>
 
     <footer class="rodape">
         <h3 class="rodape-titulo">UNIVESP - Universidade Virtual do Estado de São Paulo.</h3>
-        <p class="rodape-polo">Polo Pradópolis - Rua Presidente Vargas, 748, Pradópolis, SP. CEP 14850-000 - +55 (16) 99268-9989 / pradopolis@polo.univesp.br</p>
-        <p class="rodape-polo">Polo Sorocaba 1 - Avenida General Osório, 1840, Vila Barão, CEP 18060-502 - +55 (15) 3316-1666/ 3316-1656/ 3316-1657/ sorocaba@polo.univesp.br</p>
-        <p class="rodape-polo">Polo Sorocaba 2 - Parque Tecnológico - Avenida Itavuvu, 11.777- Distrito Industrial Zona Norte, CEP 18078-005 - +55 (15) 3316-2323/ sorocaba.tecnologico@polo.univesp.br</p>
+        
+        <p class="rodape-polo">Polo Boituva - Avenida Pereira Ignácio, 611 - Jardim Bela Vista- CEP: 18557-634 - +55  (15) 99709-7691</p>
+        <p class="rodape-polo">Polo Diadema - Rua Manoel da Nóbrega, 155 - Centro, CEP: 09910-720 - +55  (11) 4077-3550/ (11) 4056-1575</p>
+        <p class="rodape-polo">Polo Pradópolis - Rua Presidente Vargas, 748, Pradópolis, SP. CEP 14850-000 - +55 (16) 99268-9989</p>
     </footer>
     
 </body>
