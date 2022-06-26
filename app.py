@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 #criar a instancia do flask
 app = Flask(__name__)
 #Add banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xpymetgeqsycoj:f081d05e148cc86dc0ab33ca9560a1ed73b5c08657ebd2a15f19bdd0d51baa9d@ec2-18-204-142-254.compute-1.amazonaws.com:5432/ddl8akigh8cna2'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgreslq://qwqicrfnwhwfxi:fa66c2f3100a0b06cdd535179c790d3df2ef42289d242cd830df4553361efa48@ec2-23-23-151-191.compute-1.amazonaws.com:5432/deahjjdvc9afis'
 # Secret key
 app.config['SECRET_KEY'] = "pi univesp"
 #iniciar o bd
