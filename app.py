@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 
 #Create model
 class Emails(db.Model):
-    email = db.Column(db.String(200), primary_key=True, unique=True)
+    email = db.Column(db.String(), primary_key=True, unique=True)
     date_added = db.Column(db.DateTime, default=datetime.utcnow)
 
 # Criar uma Classe de formulario
